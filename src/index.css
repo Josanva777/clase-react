@@ -4,24 +4,29 @@
   padding: 0;
 }
 
-.panel-control{
+body, html {
+  width: 100%;
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+.panel-control {
   width: 100%;
   height: 100vh;
   background-image: url("../public/fondo.jpg");
   background-size: cover;
   background-position: center;
-  background-position: center center;
+  display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-
 .panel-control-aside {
-  width: 20%;
+  width: 25%;
   background-color: #b45e21ad;
   color: white;
-  border-top-right-radius:40px ;
-  border-bottom-right-radius:40px ;
+  border-top-right-radius: 40px;
+  border-bottom-right-radius: 40px;
   height: 100%;
   display: flex;
   justify-content: space-around;
@@ -30,7 +35,7 @@
   padding: 20px;
 }
 
-.panel-control-aside div{
+.panel-control-aside div {
   width: 270px;
   height: 270px;
   background-color: #ee6a0c;
@@ -38,15 +43,15 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
 
-.panel-control-aside div img{
+.panel-control-aside div img {
   width: 240px;
   height: 240px;
   border-radius: 50%;
   border: solid 1px black;
   background: none;
+  object-fit: cover;
 }
 
 .panel-control-aside nav {
@@ -57,18 +62,75 @@
   height: 60%;
 }
 
-
-.panel-control-aside nav ul{
+.panel-control-aside nav ul {
   display: flex;
   justify-content: space-around;
   align-items: center;
   flex-direction: column;
+  list-style: none;
   height: 70%;
   width: 100%;
 }
 
-.panel-control-aside nav ul li{
+.panel-control-aside nav ul li {
   width: 80%;
   height: 50px;
   background-color: #ee6a0c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  margin: 10px 0;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.panel-control-aside nav ul li:hover {
+  background-color: #d95a0a;
+  transform: scale(1.05);
+}
+
+.panel-control-section {
+  width: 70%;
+  height: 100%;
+  background-color: #b45e21ad;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.card {
+  width: 300px;
+  height: 350px;
+  border-radius: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.card div:first-child {
+  width: 100%;
+  height: 60%;
+  background-color: #ee6a0cbe;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+}
+
+.card div:last-child {
+  width: 100%;
+  height: 40%;
+  background-color: #ff6a00;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
 }

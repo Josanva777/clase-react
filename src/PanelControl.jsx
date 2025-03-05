@@ -1,20 +1,17 @@
+
+import Card from './Card';
+import MenuLateral from './MenuLateral';
+
+
+
 function PanelControl(){
     return(
         <div className="panel-control">
-            <aside className="panel-control-aside">
-                <div>
-                    <img src="" alt="" />
-                </div>
-                <nav>
-                    <ul>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                    </ul>
-                </nav>
-            </aside>
+           <MenuLateral />
             <section className="panel-control-section">
-                <h1>Mensaje de Bienvenida</h1>
+            <Card />
+            <Card />
+            <Card />
             </section>
         </div>
     )
