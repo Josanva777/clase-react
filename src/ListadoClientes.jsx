@@ -1,17 +1,18 @@
 import Card from './Card'
 import MenuLateral from './MenuLateral'
+import { clientes } from "./database.jsx"
 
 function ListadoClientes() {
     return (
         <div className="panel-control">
-           <MenuLateral />
+            <MenuLateral />
             <section className="panel-control-clientes">
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
+                {
+                    clientes.map((cliente) => { 
+                        return <Card type={'clientes'} prop={cliente} />
+                     })
+                }
+
             </section>
         </div>
     )

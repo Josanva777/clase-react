@@ -1,20 +1,21 @@
-
+import React from 'react';
 import Card from './Card';
 import MenuLateral from './MenuLateral';
+import { envios } from './database';
 
-
-
-function PanelControl(){
-    return(
+function PanelControl() {
+    return (
         <div className="panel-control">
-           <MenuLateral />
+            <MenuLateral />
             <section className="panel-control-section">
-            <Card />
-            <Card />
-            <Card />
+            {
+                    envios.map((envio) => { 
+                        return <Card type={'envios'} prop={envio} />
+                     })
+                }
             </section>
         </div>
-    )
+    );
 }
 
 export default PanelControl;

@@ -101,20 +101,21 @@ body, html {
 }
 
 .card {
-  width: 250px;
-  height: 300px;
+  width: 30%;
+  height: 45%; 
   border-radius: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s;
+  transition: transform 0.3s, box-shadow 0.3s;
   margin: 10px;
 }
 
 .card:hover {
   transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
 }
 
 .card div:first-child {
@@ -123,6 +124,11 @@ body, html {
   background-color: #ee6a0cbe;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  flex-direction: column; 
 }
 
 .card div:last-child {
@@ -134,6 +140,8 @@ body, html {
   align-items: center;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
+  padding: 10px; 
+  text-align: center; 
 }
 
 .panel-control-clientes {
